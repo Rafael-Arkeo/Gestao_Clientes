@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<ul>
+    {% for person in person %}
+        <li>
+            <a href="{% url 'atualizar' person.id%}">{{person.first_name}}</a>
+            <a href="{% url 'del' person.id %}">deletar</a>
+        </li>
+    {% endfor %}
+</ul>
+<br>
+
+<a href="{% url 'nov-cli' %}">Novo</a>
+<br>
+<br>
+    {% if user.is_authenticated %}
+        <a href="{% url 'my_logout' %}">Sair</a>
+    {% else %}
+        <a href="{% url 'login' %}">Entrar</a>
+    {% endif %}
+</body>
+</html>
