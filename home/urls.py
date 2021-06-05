@@ -1,4 +1,4 @@
-from gestão.settings import MEDIA_ROOT
+from gestão.settings.base import MEDIA_ROOT
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
