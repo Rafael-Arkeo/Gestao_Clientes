@@ -1,6 +1,6 @@
 import environ
 
-from gestão.settings.base import *
+from gestao.settings.base import *
 
 env = environ.Env()
 
